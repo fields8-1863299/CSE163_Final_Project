@@ -1,0 +1,73 @@
+﻿Table with row headings in column A and column headings in rows 6 to 9.,,,,,,,,,,,,
+Table B-1.,,,,,,,,,,,,
+People in Poverty by Selected Characteristics:  2017 and 2018,,,,,,,,,,,,
+,,,,,,,,,,,,
+"(Numbers in thousands. Margin of error in thousands or percentage points as appropriate.  People as of March of the following year.  For information on confidentiality protection, sampling error, nonsampling error, and definitions, see www2.census.gov/programs-surveys/cps/techdocs/cpsmar19.pdf)",,,,,,,,,,,,
+Characteristic,20171,,,,,2018,,,,,"Change in poverty (2018 less 2017)3,*",
+,Total,Below poverty,,,,Total,Below poverty,,,,,
+,,Number,Margin of error2 (+/-),Percent,Margin of error2 (+/-),,Number,Margin of error2 (+/-),Percent,Margin of error2 (+/-),Number,Percent
+,,,,,,,,,,,,
+PEOPLE,,,,,,,,,,,,
+Total,"322,548","39,564",896,12.3,0.3,"323,847","38,146",791,11.8,0.2,"*-1,418",*-0.5
+,,,,,,,,,,,,
+Race4 and Hispanic Origin,,,,,,,,,,,,
+White,"247,255","26,026",712,10.5,0.3,"247,634","24,945",615,10.1,0.2,"*-1,082",*-0.5
+"White, not Hispanic","195,218","16,619",513,8.5,0.3,"194,815","15,725",453,8.1,0.2,*-894,*-0.4
+Black,"42,477","9,224",358,21.7,0.8,"42,773","8,884",416,20.8,1.0,-340,-0.9
+Asian,"19,526","1,891",186,9.7,0.9,"19,768","1,996",157,10.1,0.8,105,0.4
+Hispanic (any race),"59,051","10,816",457,18.3,0.8,"59,957","10,526",403,17.6,0.7,-290,-0.8
+,,,,,,,,,,,,
+Sex,,,,,,,,,,,,
+Male,"158,111","17,272",477,10.9,0.3,"158,741","16,782",428,10.6,0.3,-489,-0.4
+Female,"164,436","22,292",501,13.6,0.3,"165,106","21,363",462,12.9,0.3,*-929,*-0.6
+,,,,,,,,,,,,
+Age,,,,,,,,,,,,
+Under age 18,"73,470","12,759",407,17.4,0.5,"73,284","11,869",415,16.2,0.6,*-890,*-1.2
+Aged 18 to 64,"198,012","21,913",573,11.1,0.3,"197,775","21,130",479,10.7,0.2,*-782,*-0.4
+Aged 65 and older,"51,066","4,893",198,9.6,0.4,"52,788","5,146",206,9.7,0.4,254,0.2
+,,,,,,,,,,,,
+Nativity,,,,,,,,,,,,
+Native-born,"277,131","33,143",802,12.0,0.3,"278,051","31,828",713,11.4,0.3,"*-1,315",*-0.5
+Foreign-born,"45,417","6,421",297,14.1,0.6,"45,796","6,317",283,13.8,0.6,-104,-0.3
+Naturalized citizen,"21,876","2,185",152,10.0,0.7,"22,294","2,215",147,9.9,0.6,30,-0.1
+Not a citizen,"23,541","4,236",241,18.0,0.9,"23,502","4,103",227,17.5,0.8,-133,-0.5
+,,,,,,,,,,,,
+Region,,,,,,,,,,,,
+Northeast,"55,962","6,347",329,11.3,0.6,"55,270","5,682",304,10.3,0.6,*-665,*-1.1
+Midwest,"67,341","7,571",380,11.2,0.6,"67,539","7,005",378,10.4,0.6,*-566,*-0.9
+South,"122,269","16,474",606,13.5,0.5,"123,462","16,757",573,13.6,0.5,283,0.1
+West,"76,976","9,172",387,11.9,0.5,"77,576","8,701",420,11.2,0.5,-472,*-0.7
+,,,,,,,,,,,,
+Residence5,,,,,,,,,,,,
+Inside metropolitan statistical areas,"279,549","33,094",885,11.8,0.3,"281,549","31,936",771,11.3,0.3,"*-1,158",*-0.5
+Inside principal cities,"103,856","16,369",669,15.8,0.5,"104,770","15,287",609,14.6,0.5,"*-1,082",*-1.2
+Outside principal cities,"175,693","16,725",604,9.5,0.3,"176,779","16,649",615,9.4,0.3,-76,-0.1
+Outside metropolitan statistical areas,"42,999","6,470",520,15.0,0.7,"42,298","6,210",526,14.7,0.8,-260,-0.4
+,,,,,,,,,,,,
+Work Experience,,,,,,,,,,,,
+"Total, aged 18 to 64","198,012","21,913",573,11.1,0.3,"197,775","21,130",479,10.7,0.2,*-782,*-0.4
+All workers,"152,227","8,106",268,5.3,0.2,"152,835","7,781",256,5.1,0.2,-325,-0.2
+"Worked full-time, year-round","109,726","2,506",127,2.3,0.1,"111,702","2,544",133,2.3,0.1,39,Z
+"Less than full-time, year-round","42,502","5,600",231,13.2,0.5,"41,133","5,237",213,12.7,0.5,*-363,-0.4
+Did not work at least 1 week,"45,785","13,807",460,30.2,0.8,"44,940","13,349",354,29.7,0.7,-458,-0.5
+,,,,,,,,,,,,
+Disability Status6,,,,,,,,,,,,
+"Total, aged 18 to 64","198,012","21,913",573,11.1,0.3,"197,775","21,130",479,10.7,0.2,*-782,*-0.4
+With a disability,"15,087","3,791",184,25.1,1.1,"14,845","3,818",186,25.7,1.1,27,0.6
+With no disability,"181,974","18,088",515,9.9,0.3,"182,010","17,279",391,9.5,0.2,*-809,*-0.4
+,,,,,,,,,,,,
+Educational Attainment,,,,,,,,,,,,
+"Total, aged 25 and older","219,821","22,007",502,10.0,0.2,"221,478","21,916",440,9.9,0.2,-91,-0.1
+No high school diploma,"22,404","5,488",209,24.5,0.8,"21,975","5,693",222,25.9,0.9,205,*1.4
+"High school, no college","62,669","8,054",280,12.9,0.4,"62,259","7,925",255,12.7,0.4,-129,-0.1
+Some college,"57,828","5,178",199,9.0,0.3,"57,428","4,812",183,8.4,0.3,*-366,*-0.6
+Bachelor's degree or higher,"76,920","3,286",178,4.3,0.2,"79,816","3,486",214,4.4,0.3,200,0.1
+*An asterisk preceding an estimate indicates change is statistically different from zero at the 90 percent confidence level.,,,,,,,,,,,,
+Z Represents or rounds to zero.,,,,,,,,,,,,
+1The 2017 data reflect the implementation of an updated processing system.  See Appendix D for more information.,,,,,,,,,,,,
+"2A margin of error is a measure of an estimate's variability.  The larger the margin of error in relation to the size of the estimate, the less reliable the estimate.  This number, when added to and subtracted from the estimate, forms the 90 percent confidence interval.  Margin of errors shown in this table are based on standard errors calculated using replicate weights.  For more information, see ""Standard Errors and Their Use"" at <www2.census.gov/library/publications/2019/demo/p60-266sa.pdf>.",,,,,,,,,,,,
+3Details may not sum to totals because of rounding.,,,,,,,,,,,,
+"4Federal surveys give respondents the option of reporting more than one race.  Therefore, two basic ways of defining a race group are possible.  A group, such as Asian, may be defined as those who reported Asian and no other race (the race-alone or single-race concept) or as those who reported Asian regardless of whether they also reported another race (the race-alone-or-in-combination concept).  This table shows data using the first approach (race alone). The use of the single-race population does not imply that it is the preferred method of presenting or analyzing data. The Census Bureau uses a variety of approaches. Information on people who reported more than one race, such as White and American Indian and Alaska Native or Asian and Black or African American, is available from the 2010 Census through American FactFinder.  About 2.9 percent of people reported more than one race in the 2010 Census.  Data for American Indians and Alaska Natives, Native Hawaiians and Other Pacific Islanders, and those reporting two or more races are not shown separately.",,,,,,,,,,,,
+"5For information on metropolitan statistical areas and principal cities, see <www.census.gov/programs-surveys/metro-micro/about/glossary.html>.",,,,,,,,,,,,
+6The sum of those with and without a disability does not equal the total because disability status is not defined for individuals in the U.S. armed forces.,,,,,,,,,,,,
+"Source:  U.S. Census Bureau, Current Population Survey, 2018 and 2019 Annual Social and Economic Supplements (CPS ASEC).",,,,,,,,,,,,

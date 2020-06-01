@@ -37,7 +37,32 @@ def getDF_D():
     return df
 
 def main():
-    getDF_B()
+    d1 = pd.read_csv("cse 163 datasets/A/ds1.csv")
+    d2 = pd.read_csv("cse 163 datasets/A/ds2.csv")
+    d5 = pd.read_csv("cse 163 datasets/A/ds5.csv")
+
+    d1 = d1.loc[12:62, :]
+    d1.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
+                  '2017 Percentage Below Poverty',
+                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
+                  'drop', 'drop', 'drop']
+    d1 = d1.loc[:, d1.columns != 'drop']
+    d1 = d1.dropna()
+
+    d2 = d2.loc[9:12, :]
+    d2.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
+                  '2017 Percentage Below Poverty',
+                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
+                  'drop', 'drop', 'drop', 'drop']
+    d2 = d2.loc[:, d2.columns != 'drop']
+    d2 = d2.dropna()
+    d2["Category"].replace({"Primary Families4…………………………………": "Primary Families"
+                            }, inplace=True)
+
+    d2.to_csv("cse 163 datasets/test/ds2.csv")
+    d1.to_csv("cse 163 datasets/test/ds1.csv")
+
+
 
 
 if __name__ == '__main__':
