@@ -1,2 +1,50 @@
-,Degree,Num Total,Num White,Num Black,Num Hispanic,Num Asian/Pacific Islander,Num American Indian/ Alaskan native,Num Two or More,Num Non Resident,Perc Total,Perc White,Perc Black,Perc Hispanic,Perc Asian/Pacific Islander,Perc American Indian/ Alaskan native,Perc Two or More
-26,Associates,"1,005,649","551,033","129,874","209,138","55,801","9,268","29,630","20,905",100.0,56.0,13.2,21.2,5.7,0.9,3.0
+,Category,2017 Total Population,2017 Total Below Poverty,2017 Percentage Below Poverty,2018 Total Population,2018 Total Below Poverty,2018 Percentage Below Poverty,2017 Number People,2017 Median Income,2018 Number People,2018 Median Income
+0,White,247255,26026,10.5,247634,24945,10.1,100113,66413,100528,66943
+1,"White, not Hispanic",195218,16619,8.5,194815,15725,8.1,84706,69851,84727,70642
+2,Black,42477,9224,21.7,42773,8884,20.8,17019,40324,17167,41361
+3,Asian,19526,1891,9.7,19768,1996,10.1,6750,83376,6981,87194
+4,Hispanic (any race),59051,10816,18.3,59957,10526,17.6,17336,51389,17758,51450
+5,Male,158111,17272,10.9,158741,16782,10.6,nan,nan,nan,nan
+6,Female,164436,22292,13.6,165106,21363,12.9,nan,nan,nan,nan
+7,Aged Under 65,73470,12759,17.4,73284,11869,16.2,94703,70944,94423,71659
+8,Aged Under 65,198012,21913,11.1,197775,21130,10.7,94703,70944,94423,71659
+9,Aged Over 65,51066,4893,9.6,52788,5146,9.7,32966,42303,34156,43696
+10,Native-born,277131,33143,12.0,278051,31828,11.4,107720,63377,108560,64243
+11,Foreign-born,45417,6421,14.1,45796,6317,13.8,19949,57795,20019,58776
+12,Naturalized citizen,21876,2185,10.0,22294,2215,9.9,10886,66101,11043,65520
+13,Not a citizen,23541,4236,18.0,23502,4103,17.5,9063,50363,8976,51944
+14,Northeast,55962,6347,11.3,55270,5682,10.3,22513,67192,22054,70113
+15,Midwest,67341,7571,11.2,67539,7005,10.4,27659,62613,27686,64069
+16,South,122269,16474,13.5,123462,16757,13.6,48630,57134,49743,57299
+17,West,76976,9172,11.9,77576,8701,11.2,28866,68593,29096,69520
+18,Inside metropolitan statistical areas,279549,33094,11.8,281549,31936,11.3,109804,65142,110789,66164
+19,Inside principal cities,103856,16369,15.8,104770,15287,14.6,42573,56299,42983,59358
+20,Outside principal cities,175693,16725,9.5,176779,16649,9.4,67230,71627,67806,70928
+21,Outside metropolitan statistical areas,42999,6470,15.0,42298,6210,14.7,17865,49116,17790,49867
+22,"Total, aged 18 to 64",198012,21913,11.1,197775,21130,10.7,nan,nan,nan,nan
+23,"Total, aged 18 to 64",198012,21913,11.1,197775,21130,10.7,nan,nan,nan,nan
+24,All workers,152227,8106,5.3,152835,7781,5.1,nan,nan,nan,nan
+25,"Worked full-time, year-round",109726,2506,2.3,111702,2544,2.3,nan,nan,nan,nan
+26,"Less than full-time, year-round",42502,5600,13.2,41133,5237,12.7,nan,nan,nan,nan
+27,Did not work at least 1 week,45785,13807,30.2,44940,13349,29.7,nan,nan,nan,nan
+28,With a disability,15087,3791,25.1,14845,3818,25.7,nan,nan,nan,nan
+29,With no disability,181974,18088,9.9,182010,17279,9.5,nan,nan,nan,nan
+30,"Total, aged 25 and older",219821,22007,10.0,221478,21916,9.9,nan,nan,nan,nan
+31,No high school diploma,22404,5488,24.5,21975,5693,25.9,nan,nan,nan,nan
+32,"High school, no college",62669,8054,12.9,62259,7925,12.7,nan,nan,nan,nan
+33,Some college,57828,5178,9.0,57428,4812,8.4,nan,nan,nan,nan
+34,Bachelor's degree or higher,76920,3286,4.3,79816,3486,4.4,nan,nan,nan,nan
+35,Primary Families,83539,7790,9.3,83508,7504,9.0,nan,nan,nan,nan
+36,Married-couple,61883,2933,4.7,61971,2938,4.7,61869,93556,61959,93654
+37,"Female householder, no spouse present",15305,4005,26.2,15052,3742,24.9,15303,42669,15043,45128
+38,"Male householder, no spouse present",6351,853,13.4,6485,824,12.7,6351,59636,6480,61518
+39,All Households,nan,nan,,nan,nan,,127669,62626,128579,63179
+40,Family households,nan,nan,,nan,nan,,83523,79693,83482,80663
+41,Nonfamily households,nan,nan,,nan,nan,,44146,37229,45096,38122
+42,.  Female householder,nan,nan,,nan,nan,,23316,31915,23515,32007
+43,   Male householder,nan,nan,,nan,nan,,20830,43843,21582,45754
+44,   15 to 24 years,nan,nan,,nan,nan,,6223,39901,6199,43531
+45,.. 25 to 34 years,nan,nan,,nan,nan,,20258,62732,20611,65890
+46,.. 35 to 44 years,nan,nan,,nan,nan,,21609,80768,21370,80743
+47,.. 45 to 54 years,nan,nan,,nan,nan,,22566,82111,22071,84464
+48,.. 55 to 64 years,nan,nan,,nan,nan,,24047,70576,24172,68951

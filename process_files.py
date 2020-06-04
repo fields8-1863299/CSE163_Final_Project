@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import re
 
 def getDF_A():
@@ -51,7 +50,6 @@ def getDF_A():
     frames = [d1, d2]
     df = pd.concat(frames)
     df = df.merge(d5, left_on='Category', right_on='Category', how='outer')
-    df = df.dropna()
 
     columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population', '2018 Total Below Poverty',
                '2017 Number People', '2017 Median Income', '2018 Number People', '2018 Median Income']
@@ -59,14 +57,15 @@ def getDF_A():
     for col in columns:
         df[col] = df[col].apply(lambda x: re.sub('[^A-Za-z0-9]+', '', str(x)))
 
-    sum_columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population',
-                   '2018 Total Below Poverty',
-                   '2017 Number People', '2018 Number People']
-    mean_columns = ['2017 Percentage Below Poverty', '2018 Percentage Below Poverty', '2017 Median Income',
-                    '2018 Median Income']
-
-    df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).mean())
-    df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).sum())
+    # sum_columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population',
+    #                '2018 Total Below Poverty',
+    #                '2017 Number People', '2018 Number People']
+    # mean_columns = ['2017 Percentage Below Poverty', '2018 Percentage Below Poverty', '2017 Median Income',
+    #                 '2018 Median Income']
+    #
+    # df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).mean())
+    # df.groupby('Category')[sum_columns].apply(lambda x: x.astype(float).sum())
+    df.to_csv("test.csv")
 
     return df
 
@@ -105,12 +104,3 @@ def getDF_D():
     df.columns = ['Race', '2017 Number (thousands)', '2017 Median Income', '2018 Number (thousands)',
                   '2018 Median Income']
     return df
-
-def main():
-    getDF_A()
-    getDF_B()
-    getDF_C()
-    getDF_D()
-
-if __name__ == '__main__':
-    main()
