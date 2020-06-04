@@ -13,10 +13,10 @@ def getDF_A():
                   'drop', 'drop', 'drop']
     d1 = d1.loc[:, d1.columns != 'drop']
     d1 = d1.dropna()
-    d1["Category"].replace({"Under age 18": "Aged Under 65",
-                            "Aged 18 to 64": "Aged Under 65",
-                            "Aged 65 and older": "Aged Over 65"
-                            }, inplace=True)
+    # d1["Category"].replace({"Under age 18": "Aged Under 65",
+    #                         "Aged 18 to 64": "Aged Under 65",
+    #                         "Aged 65 and older": "Aged Over 65"
+    #                         }, inplace=True)
 
     d2 = d2.loc[9:12, :]
     d2.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
@@ -49,6 +49,7 @@ def getDF_A():
 
     frames = [d1, d2]
     df = pd.concat(frames)
+
     df = df.merge(d5, left_on='Category', right_on='Category', how='outer')
 
     columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population', '2018 Total Below Poverty',
@@ -56,16 +57,6 @@ def getDF_A():
 
     for col in columns:
         df[col] = df[col].apply(lambda x: re.sub('[^A-Za-z0-9]+', '', str(x)))
-
-    # sum_columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population',
-    #                '2018 Total Below Poverty',
-    #                '2017 Number People', '2018 Number People']
-    # mean_columns = ['2017 Percentage Below Poverty', '2018 Percentage Below Poverty', '2017 Median Income',
-    #                 '2018 Median Income']
-    #
-    # df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).mean())
-    # df.groupby('Category')[sum_columns].apply(lambda x: x.astype(float).sum())
-    df.to_csv("test.csv")
 
     return df
 
