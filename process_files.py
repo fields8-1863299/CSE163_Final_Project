@@ -1,4 +1,74 @@
 import pandas as pd
+import numpy as np
+import re
+
+def getDF_A():
+    d1 = pd.read_csv("cse 163 datasets/A/ds1.csv")
+    d2 = pd.read_csv("cse 163 datasets/A/ds2.csv")
+    d5 = pd.read_csv("cse 163 datasets/A/ds5.csv")
+
+    d1 = d1.loc[12:62, :]
+    d1.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
+                  '2017 Percentage Below Poverty',
+                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
+                  'drop', 'drop', 'drop']
+    d1 = d1.loc[:, d1.columns != 'drop']
+    d1 = d1.dropna()
+    d1["Category"].replace({"Under age 18": "Aged Under 65",
+                            "Aged 18 to 64": "Aged Under 65",
+                            "Aged 65 and older": "Aged Over 65"
+                            }, inplace=True)
+
+    d2 = d2.loc[9:12, :]
+    d2.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
+                  '2017 Percentage Below Poverty',
+                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
+                  'drop', 'drop', 'drop', 'drop']
+    d2 = d2.loc[:, d2.columns != 'drop']
+    d2 = d2.dropna()
+    d2["Category"].replace({"Primary Families4…………………………………": "Primary Families"
+                            }, inplace=True)
+
+    d5 = d5.loc[6:43, :]
+    d5.columns = ['Category', '2017 Number People', '2017 Median Income', 'drop', '2018 Number People',
+                  '2018 Median Income', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop',
+                  'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop',
+                  'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop', 'drop']
+    d5 = d5.loc[:, d5.columns != 'drop']
+    d5 = d5.dropna()
+    d5['Category'].replace({".  Married-couple": "Married-couple",
+                            ".  Female householder, no spouse present": "Female householder, no spouse present",
+                            ".  Male householder, no spouse present": "Male householder, no spouse present",
+                            "   White, not Hispanic": "White, not Hispanic",
+                            ".. Naturalized citizen": "Naturalized citizen",
+                            ".. Not a citizen": "Not a citizen",
+                            ".. Inside principal cities": "Inside principal cities",
+                            ".. Outside principal cities": "Outside principal cities",
+                            "Under 65 years": "Aged Under 65",
+                            "65 years and older": "Aged Over 65"
+                            }, inplace=True)
+
+    frames = [d1, d2]
+    df = pd.concat(frames)
+    df = df.merge(d5, left_on='Category', right_on='Category', how='outer')
+    df = df.dropna()
+
+    columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population', '2018 Total Below Poverty',
+               '2017 Number People', '2017 Median Income', '2018 Number People', '2018 Median Income']
+
+    for col in columns:
+        df[col] = df[col].apply(lambda x: re.sub('[^A-Za-z0-9]+', '', str(x)))
+
+    sum_columns = ['2017 Total Population', '2017 Total Below Poverty', '2018 Total Population',
+                   '2018 Total Below Poverty',
+                   '2017 Number People', '2018 Number People']
+    mean_columns = ['2017 Percentage Below Poverty', '2018 Percentage Below Poverty', '2017 Median Income',
+                    '2018 Median Income']
+
+    df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).mean())
+    df.groupby('Category')[mean_columns].apply(lambda x: x.astype(float).sum())
+
+    return df
 
 def getDF_B():
     associates = getDegree("Associates", 26)
@@ -37,33 +107,10 @@ def getDF_D():
     return df
 
 def main():
-    d1 = pd.read_csv("cse 163 datasets/A/ds1.csv")
-    d2 = pd.read_csv("cse 163 datasets/A/ds2.csv")
-    d5 = pd.read_csv("cse 163 datasets/A/ds5.csv")
-
-    d1 = d1.loc[12:62, :]
-    d1.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
-                  '2017 Percentage Below Poverty',
-                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
-                  'drop', 'drop', 'drop']
-    d1 = d1.loc[:, d1.columns != 'drop']
-    d1 = d1.dropna()
-
-    d2 = d2.loc[9:12, :]
-    d2.columns = ['Category', '2017 Total Population', '2017 Total Below Poverty', 'drop',
-                  '2017 Percentage Below Poverty',
-                  'drop', '2018 Total Population', '2018 Total Below Poverty', 'drop', '2018 Percentage Below Poverty',
-                  'drop', 'drop', 'drop', 'drop']
-    d2 = d2.loc[:, d2.columns != 'drop']
-    d2 = d2.dropna()
-    d2["Category"].replace({"Primary Families4…………………………………": "Primary Families"
-                            }, inplace=True)
-
-    d2.to_csv("cse 163 datasets/test/ds2.csv")
-    d1.to_csv("cse 163 datasets/test/ds1.csv")
-
-
-
+    getDF_A()
+    getDF_B()
+    getDF_C()
+    getDF_D()
 
 if __name__ == '__main__':
     main()
