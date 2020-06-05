@@ -1,8 +1,25 @@
+"""
+Sam Fields
+CSE 163 AG
+
+Contains methods to produce datasets for use in the final project.
+Each dataset is created by importing a csv file, cleaning the file,
+    and sometimes combining with other files based on similar row
+    or column data.
+"""
+
 import pandas as pd
 import re
 
 
 def getDF_A():
+    """
+    Produces dataset A. Dataset A contains 2017 and 2018
+        poverty and income data based on categories such as
+        citizenship, ethnicity, residence, etc. based on
+        3 different csv files.
+    :return - pandas dataframe
+    """
     d1 = pd.read_csv("cse 163 datasets/A/ds1.csv")
     d2 = pd.read_csv("cse 163 datasets/A/ds2.csv")
     d5 = pd.read_csv("cse 163 datasets/A/ds5.csv")
@@ -73,6 +90,13 @@ def getDF_A():
 
 
 def getDF_B():
+    """
+    Produces dataset B. Dataset A contains 2017 - 2018
+        statistics of rewarded degree types (bachelors,
+        masters etc) based on ethnicity. Pulls information
+        from a number of different csv files.
+    :return - pandas dataframe
+    """
     associates = getDegree("Associates", 26)
     below_associates = getDegree("Below_Associates", 25)
     bachelors = getDegree("Bachelors", 26)
@@ -84,6 +108,13 @@ def getDF_B():
 
 
 def getDegree(degree, ind):
+    """
+    Helper function for getDF_B. Cleans and returns dataframe
+        for a singular specific degree type.
+    :param degree - String of degree type
+    :param ind - Integer of index to start parsing from
+    :return - pandas dataframe of singular degree type
+    """
     df = pd.read_csv("cse 163 datasets/B/" + degree + "_csv.csv")
     df = df.loc[[ind], :]
     df.columns = ['Degree', 'Num Total', 'Num White',
@@ -99,6 +130,14 @@ def getDegree(degree, ind):
 
 
 def getDF_C():
+    """
+    Produces dataset C. Dataset C contains 2017 - 2018
+        statistics of Percentage of population below
+        poverty line by state in the united states.
+    Pulls data from singular csv file
+        "cse 163 datasets/C/state_csv.csv"
+    :return - pandas dataframe
+    """
     df_C = pd.read_csv("cse 163 datasets/C/state_csv.csv")
     df_C.columns = ["0", '1', '2', '3', '4', '5', '6', '7', '8']
     df_C = df_C.loc[10:64, ['0', '5']]
@@ -108,6 +147,14 @@ def getDF_C():
 
 
 def getDF_D():
+    """
+    Produces dataset D. Dataset D contains 2017 and 2018
+        US Median Income statistics based off of categories
+        household type, race, age, region, etc
+    Pulls data from singular csv file
+        "cse 163 datasets/D/tableA1_csv.csv"
+    :return - pandas dataframe
+    """
     df = pd.read_csv("cse 163 datasets/D/tableA1_csv.csv")
     df = df.loc[16:20, ['Table with row headers in column A and column \
                         headers in row 4 through 6.', 'Unnamed: 1',
