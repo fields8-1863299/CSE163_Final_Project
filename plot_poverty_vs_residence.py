@@ -47,9 +47,9 @@ def main():
                y=df[df['Category'] == 'Outside metropolitan statistical areas'] \
                .loc[21, categories_tot_pov].to_numpy())])
     fig_tot_pov.update_layout(barmode='group',
-                          title="2017 & 2018 Total Population Blow Poverty Line by Residence",
+                          title="2017 & 2018 Total Population Below Poverty Line by Residence",
                           yaxis_title="Population Below Poverty Line")
-    fig_tot_pov.write_image("plots/2017 & 2018 Total Population Blow Poverty Line by Residence.png")
+    fig_tot_pov.write_image("plots/2017 & 2018 Total Population Below Poverty Line by Residence.png")
 
     fig_per_pov = go.Figure(data=[
         go.Bar(name='Inside metropolitan statistical areas', x=categories_per_pov,
@@ -65,9 +65,9 @@ def main():
                y=df[df['Category'] == 'Outside metropolitan statistical areas'] \
                .loc[21, categories_per_pov].to_numpy())])
     fig_per_pov.update_layout(barmode='group',
-                          title="2017 & 2018 Percentage of Population Blow Poverty Line by Residence",
+                          title="2017 & 2018 Percentage of Population Below Poverty Line by Residence",
                           yaxis_title="Percentage")
-    fig_per_pov.write_image("plots/2017 & 2018 Percentage of Population Blow Poverty Line by Residence.png")
+    fig_per_pov.write_image("plots/2017 & 2018 Percentage of Population Below Poverty Line by Residence.png")
 
     fig_inc = go.Figure(data=[
         go.Bar(name='Inside metropolitan statistical areas', x=categories_inc,
