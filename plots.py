@@ -279,6 +279,24 @@ def graph_race_income(x):
     plt.savefig('plots/income_race.png', bbox_inches='tight')
 
 
+def test_graphs(x, b):
+    """"
+    A few lines of test code for education graphs and datasets
+    :param x - pandas dataset A
+    :param b - pandas dataset B
+    """
+    # for education and poverty (Dataset A)
+    high_school = x[x['Category'] == 'High school, no college']
+    test_high_school = high_school['2017 Total Below Poverty']
+    print(test_high_school)
+    did_not_work = x[x['Category'] == 'Did not work at least 1 week']
+    test_did_not_work = did_not_work['2017 Total Below Poverty']
+    print(test_did_not_work)
+    # for degrees and race (Dataset B)
+    associates_degree = b[b['Degree'] == 'Associates']
+    print(associates_degree)
+
+
 def getPlotPop(df, categories_pop):
     """
     Plots population versus residence.
@@ -404,6 +422,7 @@ def main():
     graph_degree_race(b)  # graph 3 (of degrees)
     graph_household_income(x)  # graph 4
     graph_race_income(x)  # graph 5
+    test_graphs(x, b)
 
     # vinnay plots
     # Research Question 1
