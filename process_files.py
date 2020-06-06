@@ -1,7 +1,4 @@
 """
-Sam Fields
-CSE 163 AG
-
 Contains methods to produce datasets for use in the final project.
 Each dataset is created by importing a csv file, cleaning the file,
     and sometimes combining with other files based on similar row
