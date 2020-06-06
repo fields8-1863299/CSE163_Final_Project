@@ -5,14 +5,12 @@ Plots use dataframes generated from the process_files.py file.
 
 from process_files import getDF_A as getDFA
 from process_files import getDF_B as getDFB
-from process_files import getDF_C as getDFC
 import plotly.graph_objects as go
 import pandas as pd
-import numpy as np
-import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
+
 
 def race(df):
     """
