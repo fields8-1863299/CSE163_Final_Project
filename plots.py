@@ -1,4 +1,4 @@
-from process_files import getDF_A as getDF
+from process_files import getDF_A as getDFA
 import plotly.graph_objects as go
 
 
@@ -119,9 +119,10 @@ def getPlotIncome(df, categories_inc):
 
 
 def main():
-    df = getDF()
 
     # For getting poverty vs residence plots
+    df = getDFA()
+
     df = df[(df['Category'] == 'Inside metropolitan statistical areas') |
             (df['Category'] == 'Inside principal cities') |
             (df['Category'] == 'Inside principal cities') |
